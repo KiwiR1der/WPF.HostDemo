@@ -1,0 +1,44 @@
+﻿<Window x:Class="WPF.HostDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WPF.HostDemo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="WPF + .NET 8 WebApi Host"
+        Width="800"
+        Height="450"
+        mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="服务日志">
+            <TextBox x:Name="txtLog"
+                     FontFamily="HarmonyOS Sans SC"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto" />
+        </GroupBox>
+        <UniformGrid Grid.Column="1" Rows="5">
+            <Button x:Name="btnStart"
+                    Margin="5"
+                    Padding="5"
+                    Click="btnStart_Click"
+                    Content="启动服务"
+                    Cursor="Hand" />
+            <Button x:Name="btnGet"
+                    Margin="5"
+                    Padding="5"
+                    Click="btnGet_Click"
+                    Content="GET 请求"
+                    Cursor="Hand" />
+            <Button x:Name="btnPost"
+                    Margin="5"
+                    Padding="5"
+                    Click="btnPost_Click"
+                    Content="Post 请求"
+                    Cursor="Hand" />
+        </UniformGrid>
+    </Grid>
+</Window>
