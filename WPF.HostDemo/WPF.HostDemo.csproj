@@ -12,4 +12,8 @@
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.1" />
+	</ItemGroup>
+
 </Project>

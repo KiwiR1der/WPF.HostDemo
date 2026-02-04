@@ -47,10 +47,17 @@ namespace WPF.HostDemo
             builder.Services.AddControllers();
             builder.Services.AddRouting();
 
+            // 3.1 添加 Swagger 支持（可选）
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
             // 4.构建应用
             var webApp = builder.Build();
 
             // 5.映射控制器路由
+            webApp.UseSwagger();    // 可选：启用 Swagger 生成的 JSON 文档
+            webApp.UseSwaggerUI();  // 可选：启用 Swagger UI 界面，默认地址 /swagger
+
             webApp.MapControllers();
 
             _host = webApp;
